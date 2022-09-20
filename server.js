@@ -10,12 +10,22 @@ const app = express()
 
 
 // ----- Configure the App (app.set) -------
-
+app.set('view engine', 'ejs')
 
 
 // -------- Mount Routes ----------------
 app.get('/', function(req, res) {
   res.send('<h1>Hello, students!</h1>')
+})
+
+app.get('/home', function(req, res) {
+  res.render('home')
+})
+
+app.get('/students', function(req, res) {
+  res.render('students/index', {
+    students: students
+  })
 })
 
 
