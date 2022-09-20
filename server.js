@@ -1,6 +1,9 @@
 // ----------- Import Modules ------------
 import express from 'express'
 
+// ----- Import Student Data ---------
+import { students } from './data/student-data.js'
+
 
 // -------- Create Express App ------------
 const app = express()
@@ -12,7 +15,7 @@ const app = express()
 
 // -------- Mount Routes ----------------
 app.get('/', function(req, res) {
-  res.send('<h1>hello, friend</h1>')
+  res.send('<h1>Hello, students!</h1>')
 })
 
 
